@@ -12,11 +12,24 @@ get '/RPS/info' do
   erb(:information)
 end
 
+get '/RPS/val'do
+@rps_result = "VAL BEATS ALL"
+erb(:result)
+end
+
+get '/RPS/random'do
+@rps_result = "Stop Typing in Random Words"
+erb(:result)
+end
+
 get '/RPS/egg'do
-return "Yay, you've found the easter egg, now go play the game properly"
+@rps_result = "Yay, you've found the easter egg, now go play the game properly"
+erb(:result)
 end
 
 get '/RPS/:choice1' do
+  if ["rock", "paper", "scissors", "lizard", "spock"].include? params[:choice1]
+
   input1 = params[:choice1]
   options = {}
   user_choice = RockPaperScissors.new(options)
@@ -31,8 +44,12 @@ get '/RPS/:choice1' do
   elsif input1 == "spock"
     result = user_choice.gameplay_spock()
   end
+  else
+    result = "Stop Typing In Random Things"
+  end
   @rps_result = result.to_s
   erb(:result)
+
 end
 
 get '/RPS/:choice1/:choice2' do
