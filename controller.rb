@@ -4,6 +4,10 @@ require('json')
 require_relative('models/rock_paper_scissors')
 require('pry-byebug')
 
+get '/RPS' do
+  erb(:homepage)
+end
+
 get '/RPS/info' do
   erb(:information)
 end

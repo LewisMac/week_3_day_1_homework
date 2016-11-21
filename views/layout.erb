@@ -5,22 +5,33 @@
   <link rel="stylesheet" type="text/css" href="/style.css"/>
 </head>
 <body>
-<style>
-h1 {
-    color: black;
-    font-family: verdana;
-    font-size: 600%;
-    text-align:center
-}
-p  {
-    color: #black;
-    font-family: courier;
-    font-size: 400%;
-    text-align:center
-}
-</style>
+  <style>
+    h1 {
+      color: black;
+      font-family: verdana;
+      font-size: 600%;
+      text-align:center
+    }
+    p  {
+      color: black;
+      font-family: courier;
+      font-size: 400%;
+      text-align:center
+    }
 
-<b><%= yield %></b>
+    a:link {
+      color: navy;
+      font-size: 200%
+    }
+    a:visited {
+      color: navy;
+      font-size: 200%
+    }
+
+  </style>
+
+  
+  <b><%= yield %></b>
 
 </body>
 </html>
