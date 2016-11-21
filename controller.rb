@@ -12,6 +12,10 @@ get '/RPS/info' do
   erb(:information)
 end
 
+get '/RPS/egg'do
+return "Yay, you've found the easter egg, now go play the game properly"
+end
+
 get '/RPS/:choice1' do
   input1 = params[:choice1]
   options = {}
@@ -52,6 +56,3 @@ get '/RPS/:choice1/:choice2' do
   erb(:result)
 end
 
-get '/RPS/egg'do
-return "Yay, you've found the easter egg, now go play the game properly"
-end
