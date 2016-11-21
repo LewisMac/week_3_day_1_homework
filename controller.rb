@@ -17,11 +17,6 @@ get '/RPS/val'do
 erb(:result)
 end
 
-get '/RPS/random'do
-@rps_result = "Stop Typing in Random Words"
-erb(:result)
-end
-
 get '/RPS/egg'do
 @rps_result = "Yay, you've found the easter egg, now go play the game properly"
 erb(:result)
