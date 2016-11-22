@@ -17,6 +17,11 @@ get '/RPS/val'do
 erb(:result)
 end
 
+get '/RPS/john'do
+@rps_result = "GOOD MORNING JOHN!"
+erb(:result)
+end
+
 get '/RPS/egg'do
 @rps_result = "Yay, you've found the easter egg, now go play the game properly"
 erb(:result)
